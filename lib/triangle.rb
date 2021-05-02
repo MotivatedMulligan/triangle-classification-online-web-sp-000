@@ -8,11 +8,11 @@ class Triangle
 
   def initialize (a, b, c)
     @a = a
-    @b = b 
+    @b = b
     @c = c
-      
+
     # rescue ExceptionName
-    #   
+    #
     # end
     # @sides = [a, b, c]
     # @a, @b, @c = [a,b,c].sort
@@ -43,4 +43,3 @@ end
   end
 
 end
-
