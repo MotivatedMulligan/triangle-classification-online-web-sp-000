@@ -6,10 +6,10 @@ class Triangle
   # end
 
 
-  def initialize (a, b, c)
-    @a = a
-    @b = b
-    @c = c
+  def initialize(attributes) #(a, b, c)
+    # @a = a
+    # @b = b
+    # @c = c
 
     # rescue ExceptionName
     #
