@@ -6,10 +6,10 @@ class Triangle
   # end
 
 
-  def initialize(attributes) #(a, b, c)
-    # @a = a
-    # @b = b
-    # @c = c
+  def initialize(a, b, c)#(attributes) 
+    @a = a
+    @b = b
+    @c = c
 
     # rescue ExceptionName
     #
@@ -18,7 +18,7 @@ class Triangle
     # @a, @b, @c = [a,b,c].sort
     # raise TriangleError unless valid_triangle?
     # @type = triangle_type
-    attributes.each {|key, value| self.send(("#{key}="), value)}
+   [:a, :b , :c].each {|key, value| self.send(("#{key}="), value)}
   end
 
 #+++++
