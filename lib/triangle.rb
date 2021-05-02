@@ -1,31 +1,26 @@
 class Triangle
-   #attr_accessor :a, :b, :c
-
-  def initialize(a, b, c)#(attributes)
-    @a = a
-    @b = b
-    @c = c
-
-#   [:a, :b , :c].each {|key, value| self.send(("#{key}="), value)}
+  attr_accessor :sides
+  
+  @sides = []
+  
+  def initialize (side1, side2, side3)
+    @sides = [side1, side2, side3]
+    @sides.sort!
   end
-#+++++
-  def kind(a, b, c)
-  #  sorted_triangle_lengths = [a, b, c].sort
-  # raise TriangleError if (sorted_triangle_lengths[0] + sorted_triangle_lengths[1] <= sorted_triangle_lengths)
-  raise TriangleError if (a <= 0) || (b <= 0) || (c <= 0)
-  return :equilateral if (a == b) && (b == c) && (c == a)
-  return :isosceles if (a == b) || (a == c) || (b == c)
-  return :scalene
-end
-
-  # def valid_triangle?
-  #   !!(@a > 0 && @a + @b > @c)
-  # end
-  # def triangle_type
-  #   [:equilateral, :isosceles, :scalene][[@a, @b, @c].uniq.size -1]
-  # end
-
-   class TriangleError < StandardError
+  
+  def kind
+    if @sides.any?{|side| side <= 0} || ((@sides[0] + @sides[1]) <= @sides[2])
+      raise TriangleError
+    elsif @sides.uniq.length == 1
+      :equilateral
+    elsif @sides.uniq.length == 2
+      :isosceles
+    else
+      :scalene
+    end
   end
-
+  
+  class TriangleError < StandardError
+    
+  end
 end
