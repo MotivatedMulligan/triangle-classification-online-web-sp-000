@@ -18,7 +18,7 @@ class Triangle
    [:a, :b , :c].each {|key, value| self.send(("#{key}="), value)}
   end
 #+++++
-  def kind#(a, b, c)
+  def kind(a, b, c)
   #  sorted_triangle_lengths = [a, b, c].sort
   # raise TriangleError if (sorted_triangle_lengths[0] + sorted_triangle_lengths[1] <= sorted_triangle_lengths)
   raise TriangleError if (a <= 0 || b <= 0 || c <= 0)
