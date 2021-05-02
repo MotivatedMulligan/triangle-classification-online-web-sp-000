@@ -1,24 +1,15 @@
 class Triangle
-   attr_accessor :a, :b, :c
-  #
-  # def initialize(attributes)
-  #   attributes.each {|key, value| self.send(("#{key}="), value)}
-  # end
+   #attr_accessor :a, :b, :c
+
   def initialize(a, b, c)#(attributes)
     @a = a
     @b = b
     @c = c
-    # rescue ExceptionName
-    #
-    # end
-    # @sides = [a, b, c]
-    # @a, @b, @c = [a,b,c].sort
-    # raise TriangleError unless valid_triangle?
-    # @type = triangle_type
-   [:a, :b , :c].each {|key, value| self.send(("#{key}="), value)}
+
+#   [:a, :b , :c].each {|key, value| self.send(("#{key}="), value)}
   end
 #+++++
-  def kind(a:, b:, c:)
+  def kind(a, b, c)
   #  sorted_triangle_lengths = [a, b, c].sort
   # raise TriangleError if (sorted_triangle_lengths[0] + sorted_triangle_lengths[1] <= sorted_triangle_lengths)
   raise TriangleError if (a <= 0) || (b <= 0) || (c <= 0)
