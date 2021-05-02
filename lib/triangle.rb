@@ -5,7 +5,7 @@ class Triangle
   #   attributes.each {|key, value| self.send(("#{key}="), value)}
   # end
 
-  
+
   def initialize a, b, c
     @sides = [a, b, c]
     @a, @b, @c = [a,b,c].sort
