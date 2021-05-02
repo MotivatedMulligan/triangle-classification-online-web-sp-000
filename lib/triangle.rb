@@ -6,7 +6,7 @@ class Triangle
   # end
 
 
-  def initialize(a, b, c)#(attributes) 
+  def initialize(a, b, c)#(attributes)
     @a = a
     @b = b
     @c = c
