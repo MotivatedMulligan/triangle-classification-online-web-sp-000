@@ -18,13 +18,12 @@ class Triangle
     # @a, @b, @c = [a,b,c].sort
     # raise TriangleError unless valid_triangle?
     # @type = triangle_type
-    #attributes.each {|key, value| self.send(("#{key}="), value)}
+    attributes.each {|key, value| self.send(("#{key}="), value)}
   end
 
 #+++++
   def triangle(a, b, c)
-    sorted_triangle_lengths = [a, b, c].sort
-
+   sorted_triangle_lengths = [a, b, c].sort
   raise TriangleError if (sorted_triangle_lengths[0] + sorted_triangle_lengths[1] <= sorted_triangle_lengths)
   raise TriangleError if (a <= 0 || b <= 0 || c <= 0)
   return :equilateral if (a==b && b==c && a == c)
